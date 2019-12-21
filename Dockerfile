@@ -38,6 +38,7 @@ ONBUILD RUN NODE_ENV=development yarn install
 ONBUILD COPY .babelrc ./
 ONBUILD COPY jest.config.js ./
 ONBUILD COPY .env.test ./
+ONBUILD COPY data ./data
 ONBUILD COPY src ./src
 ONBUILD COPY tests ./tests
 
