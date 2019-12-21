@@ -12,6 +12,7 @@ ONBUILD COPY --from=builder /usr/app/lib ./lib
 ONBUILD COPY package.json yarn.lock ./
 
 ONBUILD COPY src ./src
+ONBUILD COPY data ./data
 ONBUILD RUN sh -c "if [ \"$NODE_ENV\" == \"production\" ]; then rm -rf src; fi"
 ONBUILD ENV NODE_ENV=${NODE_ENV}
 
