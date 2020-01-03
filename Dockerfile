@@ -35,7 +35,7 @@ ONBUILD COPY --from=installer /usr/app/.npmrc ./
 ONBUILD COPY --from=installer /usr/app/.yarnrc ./
 ONBUILD RUN NODE_ENV=development yarn install
 
-ONBUILD COPY .babelrc ./
+ONBUILD COPY babel.config.js ./
 ONBUILD COPY jest.config.js ./
 ONBUILD COPY .env.test ./
 ONBUILD COPY data ./data
